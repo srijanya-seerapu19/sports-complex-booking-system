@@ -101,8 +101,9 @@ Manual sports complex scheduling creates significant administrative overhead:
 *Active booking view showing Badminton Court 1 with live 59:38 countdown timer, session ID, cancel button, and progress bar.*
 ![Active Booking](screenshots/active-booking.png)
 
----: | :---: |
-| <img src="screenshots/mobile_view_1.jpg" width="300" alt="Mobile Lineup"/> | <img src="screenshots/mobile_view_2.jpg" width="300" alt="Mobile Booking"/> |
+### 3. Digital Sports Pass
+*Official Anurag University Athletic Pass showing player name, reserved court, sport, session time window, and unique barcode for gate verification.*
+![Sports Pass](screenshots/sports-pass.png)
 
 ---
 
