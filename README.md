@@ -1,4 +1,4 @@
-# 🏟️ Sports Complex Availability & Booking System
+﻿# 🏟️ Sports Complex Availability & Booking System
 
 > **Discover. Check Real-Time Availability. Book Your Game.**
 
@@ -35,7 +35,7 @@ A full-stack, enterprise-grade web application designed to simplify sports facil
 - [Complete Folder Structure](#-complete-folder-structure)
 - [Local Installation & Setup](#-local-installation--setup)
 - [REST API Reference](#-rest-api-reference)
-- [Deployment Guide](#-deployment-guide)
+- [Deployment](#-deployment)
 - [Testing & Quality Assurance](#-testing--quality-assurance)
 - [Future Enhancements](#-future-enhancements)
 - [License](#-license)
@@ -93,22 +93,15 @@ Manual sports complex scheduling creates significant administrative overhead:
 
 ## 📸 Application Screenshots
 
-### 1. Dashboard & Court Lineup
-*Live view of the university sports complex lineup, real-time availability counters, sport filter tabs, and duration selector.*
-![Homepage and Lineup](screenshots/homepage.png)
+### 1. Dashboard & Sports Court Lineup
+*Homepage showing all 9 sports categories, real-time court availability, sport filter tabs, and navigation.*
+![Dashboard](screenshots/homepage.png)
 
-### 2. Live Active Session & Real-Time Countdown
-*Real-time session card displaying sport details, booking ID, time window, and live ticking countdown with animated progress bar.*
-![Availability and Countdown](screenshots/availability.png)
+### 2. Live Active Session with Real-Time Countdown
+*Active booking view showing Badminton Court 1 with live 59:38 countdown timer, session ID, cancel button, and progress bar.*
+![Active Booking](screenshots/active-booking.png)
 
-### 3. Booking Confirmation & Cancellation Workflow
-*Branded modal for slot confirmation and instant early cancellation with seamless court re-allocation.*
-![Booking Flow](screenshots/booking.png)
-
-### 4. Responsive Mobile Experience
-*Mobile-first viewport tested on Android and iOS devices for on-the-go court reservations.*
-| Real-Time Mobile View | Mobile Booking History |
-| :---: | :---: |
+---: | :---: |
 | <img src="screenshots/mobile_view_1.jpg" width="300" alt="Mobile Lineup"/> | <img src="screenshots/mobile_view_2.jpg" width="300" alt="Mobile Booking"/> |
 
 ---
@@ -260,13 +253,9 @@ sports-complex-booking-system/
 │   ├── sample-data.sql            # Seed courts across 9 sports & demo users
 │   └── relationships.md           # Foreign key constraints & check rules
 │
-├── screenshots/                   # Verified Application Capture Gallery
-│   ├── homepage.png
-│   ├── facilities.png
-│   ├── availability.png
-│   ├── booking.png
-│   ├── mobile_view_1.jpg
-│   └── mobile_view_2.jpg
+├── screenshots/                   # Application Capture Gallery
+│   ├── homepage.png               # Dashboard and court lineup view
+│   └── active-booking.png         # Live session with countdown timer
 │
 └── tests/                         # Quality Assurance
     └── test-plan.md               # Test matrix, unit & E2E verification
@@ -333,28 +322,14 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
-## ☁️ Deployment Guide
+## ☁️ Deployment
 
-### Deploy Backend to Render (Free Web Service)
-1. In the [Render Dashboard](https://dashboard.render.com), click **New → Web Service**.
-2. Connect this repository and set **Root Directory** to `backend`.
-3. Set **Runtime** to `Java`.
-4. Build Command: `./mvnw clean package -DskipTests`
-5. Start Command: `java -jar target/sports-complex-backend-1.0.0.jar`
-6. Add Environment Variables:
-   - `DB_URL`: `jdbc:mysql://<host>:3306/<database>?sslMode=VERIFY_IDENTITY`
-   - `DB_USERNAME`: `<username>`
-   - `DB_PASSWORD`: `<password>`
-   - `COOKIE_SECURE`: `true`
-   - `COOKIE_SAME_SITE`: `none`
+Both the frontend and backend are deployed on **[Render](https://render.com)**:
 
-### Deploy Frontend to Render / Vercel (Free Static Site)
-1. Create a **New Static Site** on Render or Vercel.
-2. Set **Root Directory** to `frontend`.
-3. Build Command: `npm run build`
-4. Publish Directory: `dist`
-5. Add Environment Variable:
-   - `VITE_API_URL`: `https://sports-court-availability-backend.onrender.com/api`
+| Component | Live URL |
+| :--- | :--- |
+| **Frontend** | [sports-court-availability-tracker.onrender.com](https://sports-court-availability-tracker.onrender.com) |
+| **Backend API** | [sports-court-availability-backend.onrender.com/api](https://sports-court-availability-backend.onrender.com/api) |
 
 ---
 
@@ -368,7 +343,8 @@ Open `http://localhost:5173` in your browser.
 ---
 
 ## 📄 License
-This project is licensed under the [MIT License](LICENSE) - feel free to use and adapt it for academic and professional portfolios.
+This project is licensed under the [MIT License](LICENSE).
 
 **Author**: [Srijanya Seerapu](https://github.com/srijanya-seerapu19)  
-**Institution**: Anurag University · Department of Physical Education & Sports
+**Email**: srijanyaseerapu@gmail.com  
+**Institution**: Anurag University · Department of Electronics and Communication Engineering
